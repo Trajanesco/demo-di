@@ -1,15 +1,18 @@
 package com.matmic.demodi.services;
 
+
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
 @Primary
-@Profile({"en", "default"})
-public class PrimaryGreetingService implements GreetingService{
+@Profile("es")
+public class PrimarySpanishGreetingService implements GreetingService{
+
+
     @Override
     public String sayGreeting() {
-        return "Hi from Primary Bean?";
+        return "Hola de Primary el Espana";
     }
 }
