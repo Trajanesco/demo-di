@@ -14,7 +14,7 @@ public class DemoDiApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DemoDiApplication.class, args);
 		MyController ctrl = (MyController)ctx.getBean("myController");
-		ctrl.hello();
+		System.out.println(ctrl.hello());
 
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
